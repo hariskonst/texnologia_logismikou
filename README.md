@@ -1,2 +1,0 @@
-# Texnologia Logismikou
-mplamplampal loukas
