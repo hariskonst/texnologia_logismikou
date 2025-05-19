@@ -1,1 +1,0 @@
-DES EDW PAID
