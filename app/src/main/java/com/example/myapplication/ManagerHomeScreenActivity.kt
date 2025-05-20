@@ -16,7 +16,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
         secondButton.setOnClickListener {
             val intent = Intent(this, ReceiptManagerScrActivity::class.java)
             startActivity(intent)
-
+            //astalavistababy
         }
     }
 }
