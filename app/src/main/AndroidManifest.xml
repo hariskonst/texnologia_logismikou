@@ -33,6 +33,8 @@
         <activity
             android:name=".Mngr_Notif_ScrActivity"
             android:exported="false" />
+
+        <!--milto se gamw-->
 </application>
 
 </manifest>
