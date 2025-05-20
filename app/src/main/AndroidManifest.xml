@@ -33,7 +33,6 @@
         <activity
             android:name=".Mngr_Notif_ScrActivity"
             android:exported="false" />
-        <!--miltos-->
 </application>
 
 </manifest>
