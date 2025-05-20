@@ -51,91 +51,92 @@
     </LinearLayout>
 
     <!-- Middle elements -->
+
+
+    <!-- Bottom Navigation (Fake Icons) -->
     <LinearLayout
         android:id="@+id/middle_elements"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
+        android:layout_width="336dp"
+        android:layout_height="292dp"
         android:background="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.173">
 
         <!-- Apartment List -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#59769B"
-            android:padding="12dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center_vertical"
             android:layout_gravity="center"
-            android:backgroundTint="#597698"
             android:layout_margin="8dp"
+            android:layout_marginBottom="12dp"
+            android:background="#59769B"
+            android:backgroundTint="#597698"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
             android:shape="rectangle">
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="Apartment List"
-                android:textSize="16sp"
                 android:textColor="#000"
-                android:layout_marginStart="8dp"/>
+                android:textSize="16sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="Edit"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
         <!-- Tenant -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#59769B"
-            android:padding="12dp"
-            android:gravity="center_vertical"
             android:layout_gravity="center"
-            android:backgroundTint="#59769B"
             android:layout_margin="8dp"
+            android:background="#59769B"
+            android:backgroundTint="#59769B"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
             android:shape="rectangle">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="Tenant"
-                android:textSize="16sp"
                 android:textColor="#000"
-                android:layout_marginStart="8dp"/>
+                android:textSize="16sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="+ Add"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"/>
+                android:textSize="14sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:text="- Remove"
-                android:textSize="14sp"
-                android:layout_marginStart="4dp"/>
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
 
-
-
-    <!-- Bottom Navigation (Fake Icons) -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
