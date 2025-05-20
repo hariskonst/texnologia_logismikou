@@ -27,6 +27,9 @@
         <activity
             android:name=".TenapMngrScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".TntListScrActivity"
+            android:exported="false" />
     <activity
         android:name=".NotificationActivity"
         android:exported="false" />
