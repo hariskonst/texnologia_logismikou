@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="settings">settings</string>
+    <string name="vote">vote</string>
+    <string name="payment">payment</string>
+    <string name="upload_Receipts">upload receipts</string>
+    <string name="notification">notification</string>
+</resources>
