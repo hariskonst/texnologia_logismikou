@@ -22,7 +22,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         val notifbutton = findViewById<ImageButton>(R.id.notifbutton)
         notifbutton.setOnClickListener {
-            val intent = Intent(this, NotificationActivity::class.java)
+            val intent = Intent(this, Mngr_Notif_ScrActivity::class.java)
             startActivity(intent)
 
         }

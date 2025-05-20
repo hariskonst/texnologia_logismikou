@@ -70,7 +70,7 @@
             tools:ignore="ButtonStyle,HardcodedText" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/LostFound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -78,6 +78,7 @@
             tools:ignore="ButtonStyle,HardcodedText,InefficientWeight" />
 
         <Button
+            android:id="@+id/Maintenance"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -198,7 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/screenshot_2025_05_18_160145"
+            app:srcCompat="@drawable/poll"
             android:contentDescription="@string/vote"
             />
 

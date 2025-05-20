@@ -5,4 +5,5 @@
     <string name="payment">payment</string>
     <string name="upload_Receipts">upload receipts</string>
     <string name="notification">notification</string>
+    <string name="new_notification">+ New Notification</string>
 </resources>
