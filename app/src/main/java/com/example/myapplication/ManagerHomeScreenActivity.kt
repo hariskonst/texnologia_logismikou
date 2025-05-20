@@ -18,6 +18,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
             //astalavistababy
             //gamw to mouni
+            //dasdasdasasd
         }
     }
 }
