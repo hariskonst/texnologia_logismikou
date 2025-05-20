@@ -17,6 +17,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             val intent = Intent(this, ReceiptManagerScrActivity::class.java)
             startActivity(intent)
             //astalavistababy
+            //gamw to mouni
         }
     }
 }
