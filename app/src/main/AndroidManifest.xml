@@ -30,9 +30,9 @@
         <activity
             android:name=".TntListScrActivity"
             android:exported="false" />
-    <activity
-        android:name=".Mngr_Notif_ScrActivity"
-        android:exported="false" />
+        <activity
+            android:name=".Mngr_Notif_ScrActivity"
+            android:exported="false" />
 </application>
 
 </manifest>
