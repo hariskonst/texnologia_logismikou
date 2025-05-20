@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -16,10 +17,14 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
         secondButton.setOnClickListener {
             val intent = Intent(this, ReceiptManagerScrActivity::class.java)
             startActivity(intent)
-            //astalavistababy
-            //gamw to mouni
-            //dasdasdasasd
-            //adjalksdjlkasjdl
+
+        }
+
+        val tenButton = findViewById<Button>(R.id.tenapBtn)
+        tenButton.setOnClickListener {
+            val intent = Intent(this, TenapMngrScr::class.java)
+            startActivity(intent)
+
         }
     }
 }
