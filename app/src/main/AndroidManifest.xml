@@ -25,8 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TenapMngrScr"
+            android:name=".TenapMngrScrActivity"
             android:exported="false" />
-    </application>
+    <activity
+        android:name=".NotificationActivity"
+        android:exported="false" />
+</application>
 
 </manifest>

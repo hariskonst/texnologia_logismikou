@@ -11,7 +11,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.manager_home_scr)
+        setContentView(R.layout.mngr_home_scr)
 
         val secondButton = findViewById<ImageButton>(R.id.UploadReceiptButton)
         secondButton.setOnClickListener {
@@ -20,9 +20,16 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
+        val notifbutton = findViewById<ImageButton>(R.id.notifbutton)
+        notifbutton.setOnClickListener {
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
+
+        }
+
         val tenButton = findViewById<Button>(R.id.tenapBtn)
         tenButton.setOnClickListener {
-            val intent = Intent(this, TenapMngrScr::class.java)
+            val intent = Intent(this, TenapMngrScrActivity::class.java)
             startActivity(intent)
 
         }
