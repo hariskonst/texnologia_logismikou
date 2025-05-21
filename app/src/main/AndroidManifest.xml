@@ -54,6 +54,9 @@
         <activity
             android:name=".TenantHomeScreenActivity"
             android:exported="false" />
+        <activity
+            android:name=".Mngr_Poll_ScrActivity"
+            android:exported="false" />
 
     </application>
 

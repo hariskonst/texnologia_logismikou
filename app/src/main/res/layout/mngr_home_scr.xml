@@ -40,7 +40,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/settingsButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -216,7 +216,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/PollButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

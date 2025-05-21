@@ -6,6 +6,117 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReceiptManagerScrActivity">
+    tools:context=".ReceiptManagerScrActivity"
+    android:background="@android:color/system_accent1_500"
+    tools:ignore="NewApi">
+
+
+  <LinearLayout
+
+      android:orientation="vertical"
+      android:padding="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="MissingConstraints">
+
+    <!-- Ενότητα Files -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#4E6E94"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:clipToOutline="true"
+        tools:ignore="UnusedAttribute">
+
+      <TextView
+          android:text="Files"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold"
+          android:textSize="18sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          tools:ignore="HardcodedText" />
+
+      <TextView
+          android:text="Elevator Fix\n500 $\nFile ~ 📄"
+          android:textColor="#FFFFFF"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          tools:ignore="HardcodedText" />
+
+      <TextView
+          android:text="• ~~~~~~~~~~~~~~\n• ~~~~~~~~~~~~~~"
+          android:textColor="#FFFFFF"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <!-- Ενότητα Service Description -->
+    <TextView
+        android:text="Service description"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="48dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@color/black"
+        android:hint="Describe the service"
+        tools:ignore="HardcodedText,TextFields" />
+
+    <!-- Amount -->
+    <TextView
+        android:text="Amount"
+        android:textColor="#000000"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:background="@android:color/darker_gray"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <!-- Επιλογή αρχείου -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#6D84A6"
+        android:text="choose file"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#6D84A6"
+        android:text="Public common charges"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+  </LinearLayout>
+
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>

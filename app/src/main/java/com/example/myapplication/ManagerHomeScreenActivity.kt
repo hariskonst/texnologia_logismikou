@@ -46,5 +46,18 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
             startActivity(intent)
         }
+
+        val pollButton = findViewById<ImageButton>(R.id.PollButton)
+        pollButton.setOnClickListener {
+            val intent = Intent(this, Mngr_Poll_ScrActivity::class.java)
+            startActivity(intent)
+        }
+
+        val tenantHomeButton = findViewById<ImageButton>(R.id.settingsButton)
+        tenantHomeButton.setOnClickListener {
+            val intent = Intent(this, TenantHomeScreenActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
