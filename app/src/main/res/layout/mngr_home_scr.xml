@@ -108,7 +108,7 @@
 
             <TextView
                 android:text="Maintenances"
-                android:textSize="8sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Marketplace"
-                android:textSize="8sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 tools:ignore="HardcodedText,SmallSp" />
