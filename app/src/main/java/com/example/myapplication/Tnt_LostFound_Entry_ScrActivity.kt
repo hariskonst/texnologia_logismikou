@@ -1,34 +1,48 @@
 package com.example.myapplication
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_lost_found_entry_scr)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.managerentryscreen)) { v, insets ->
+        // Εφαρμογή συστήματος insets (status/navigation bar space)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.managerentryscreen)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val title = findViewById<EditText>(R.id.editTitle)
-        val desc = findViewById<EditText>(R.id.editDescription)
-        val date = findViewById<EditText>(R.id.editDate)
-        val submit = findViewById<Button>(R.id.submitButton)
+        // Ανάκτηση αναφορών στα πεδία και το κουμπί
+        val titleField = findViewById<EditText>(R.id.editTitle)
+        val descField = findViewById<EditText>(R.id.editDescription)
+        val dateField = findViewById<EditText>(R.id.editDate)
+        val submitButton = findViewById<Button>(R.id.submitButton)
 
-        submit.setOnClickListener {
-            if (title.text.isNotEmpty() && desc.text.isNotEmpty() && date.text.isNotEmpty()) {
-                Toast.makeText(this, "Entry submitted!", Toast.LENGTH_SHORT).show()
+        submitButton.setOnClickListener {
+            val title = titleField.text.toString().trim()
+            val desc = descField.text.toString().trim()
+            val date = dateField.text.toString().trim()
+
+            if (title.isNotEmpty() && desc.isNotEmpty() && date.isNotEmpty()) {
+                val newItem = "$title - $desc - $date"
+
+                // Επιστροφή της καταχώρησης στο calling Activity
+                val resultIntent = Intent().apply {
+                    putExtra("newLostItem", newItem)
+                }
+
+                setResult(Activity.RESULT_OK, resultIntent)
                 finish()
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
@@ -36,3 +50,5 @@ class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
         }
     }
 }
+
+

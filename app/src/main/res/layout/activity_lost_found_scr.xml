@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/system_accent1_500">
 
+    <!-- Τίτλος -->
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="0dp"
@@ -14,13 +15,14 @@
         android:text="Lost and Found"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
         android:gravity="center"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
+    <!-- Λίστα Lost Items -->
     <ListView
         android:id="@+id/lostItemsListView"
         android:layout_width="0dp"
@@ -31,8 +33,12 @@
         app:layout_constraintBottom_toTopOf="@id/newEntryButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Κουμπί για νέα καταχώρηση -->
     <Button
         android:id="@+id/newEntryButton"
         android:layout_width="0dp"
@@ -43,4 +49,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="24dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

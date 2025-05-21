@@ -11,15 +11,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Τίτλος -->
         <TextView
+            android:id="@+id/cardDetailsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Lost and Found Entry"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:textColor="@android:color/black" />
 
+        <!-- Πεδία καταχώρησης -->
         <EditText
             android:id="@+id/editTitle"
             android:layout_width="match_parent"
@@ -33,17 +37,18 @@
             android:layout_height="wrap_content"
             android:hint="Object Description"
             android:inputType="textMultiLine"
-            android:lines="3"
+            android:minLines="2"
             android:layout_marginTop="12dp" />
 
         <EditText
             android:id="@+id/editDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date Found"
-            android:inputType="date"
+            android:hint="Date Found (e.g. 01/05/2025)"
+            android:inputType="text"
             android:layout_marginTop="12dp" />
 
+        <!-- Κουμπί υποβολής -->
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"

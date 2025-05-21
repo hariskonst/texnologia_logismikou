@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -14,49 +16,29 @@ class Tnt_PaymentComp_ScrActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment_comp_scr)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.paymentLayout)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.paymentLayout)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        SubmitButton()
-    }
-
-    fun FillForm(): Boolean {
-        val name = findViewById<EditText>(R.id.nameOnCard).text.toString()
-        val number = findViewById<EditText>(R.id.cardNumber).text.toString()
-        val expiry = findViewById<EditText>(R.id.expiryDate).text.toString()
-        val cvc = findViewById<EditText>(R.id.cardCVC).text.toString()
-        return name.isNotEmpty() && number.isNotEmpty() && expiry.isNotEmpty() && cvc.isNotEmpty()
-    }
-
-    fun SubmitButton() {
+        val name = findViewById<EditText>(R.id.nameOnCard)
+        val number = findViewById<EditText>(R.id.cardNumber)
+        val expiry = findViewById<EditText>(R.id.expiryDate)
+        val cvc = findViewById<EditText>(R.id.cardCVC)
         val submit = findViewById<Button>(R.id.submitPaymentButton)
+
         submit.setOnClickListener {
-            if (CheckForm()) {
-                AddData()
-                ConfMessage()
+            if (name.text.isNotEmpty() && number.text.isNotEmpty() && expiry.text.isNotEmpty() && cvc.text.isNotEmpty()) {
+                val paid = "${name.text} paid with card ****${number.text.takeLast(4)} - Done"
+                val result = Intent().apply {
+                    putExtra("newPayment", paid)
+                }
+                setResult(Activity.RESULT_OK, result)
                 finish()
             } else {
-                ErrorMessage()
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    fun CheckForm(): Boolean {
-        return FillForm()
-    }
-
-    fun AddData() {
-        // Θα μπορούσε να αποθηκεύσει στοιχεία
-    }
-
-    fun ConfMessage() {
-        Toast.makeText(this, "Payment submitted successfully!", Toast.LENGTH_SHORT).show()
-    }
-
-    fun ErrorMessage() {
-        Toast.makeText(this, "Please fill all fields!", Toast.LENGTH_SHORT).show()
     }
 }
