@@ -45,7 +45,6 @@
         <activity
             android:name=".Tnt_PaymentComp_ScrActivity"
             android:exported="false" />
-</application>
         <activity
             android:name=".MarketplaceActivity"
             android:exported="false" />

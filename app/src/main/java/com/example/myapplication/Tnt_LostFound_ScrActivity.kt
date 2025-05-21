@@ -31,7 +31,6 @@ class Tnt_LostFound_ScrActivity : AppCompatActivity() {
         "Umbrella - Foldable black - 25/02/2025"
     )
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
