@@ -33,6 +33,5 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-//mpla
     }
 }
