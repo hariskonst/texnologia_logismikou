@@ -41,8 +41,10 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
-
-
-//mpla
+        val paymentButton = findViewById<ImageButton>(R.id.imageButton11)
+        paymentButton.setOnClickListener {
+            val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
