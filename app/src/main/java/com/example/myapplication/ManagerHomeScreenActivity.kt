@@ -41,11 +41,8 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
-        val paymentButton = findViewById<ImageButton>(R.id.imageButton11) // δεύτερο κουμπί (πορτοφόλι)
-        paymentButton.setOnClickListener {
-            val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
-            startActivity(intent)
-        }
+
+
 //mpla
     }
 }

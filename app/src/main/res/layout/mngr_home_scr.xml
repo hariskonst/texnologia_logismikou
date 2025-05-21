@@ -137,8 +137,12 @@
         app:layout_constraintTop_toBottomOf="@id/maintenance_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="60dp"
+        android:foreground="?attr/selectableItemBackground">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -179,7 +183,24 @@
                 android:text="• ~~~~~~~~~~~~~~~~"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <!-- Switch to Tenant Button -->
+    <Button
+        android:id="@+id/btnSwitchToTenant"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Switch to Tenant"
+        android:textAllCaps="false"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="8dp"
+        tools:ignore="HardcodedText" />
+
 
     <!-- Bottom Navigation (Fake Icons) -->
     <LinearLayout
