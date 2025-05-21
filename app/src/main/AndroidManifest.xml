@@ -39,7 +39,16 @@
         <activity
             android:name=".Tnt_LostFound_ScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".MarketplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TenantHomeScreenActivity"
+            android:exported="false" />
 
-</application>
+    </application>
 
 </manifest>

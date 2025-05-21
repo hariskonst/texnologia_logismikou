@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class ManagerHomeScreenActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "WrongViewCast")
@@ -41,8 +42,15 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
+        val marketplaceCard = findViewById<CardView>(R.id.marketplace_card)
+        marketplaceCard.setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
+        }
+
+        val switch = findViewById<Button>(R.id.btnSwitchToTenant).setOnClickListener {
+            startActivity(Intent(this, TenantHomeScreenActivity::class.java))
+        }
 
 
-//mpla
     }
 }
