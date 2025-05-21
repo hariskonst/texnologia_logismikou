@@ -36,9 +36,12 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         val lostButton = findViewById<Button>(R.id.LostFound)
         lostButton.setOnClickListener {
-            val intent = Intent(this, TenapMngrScrActivity::class.java)
+            val intent = Intent(this, Tnt_LostFound_ScrActivity::class.java)
             startActivity(intent)
+
         }
+
+
 
 //mpla
     }

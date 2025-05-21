@@ -33,6 +33,13 @@
         <activity
             android:name=".Mngr_Notif_ScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".Tnt_LostFound_Entry_ScrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tnt_LostFound_ScrActivity"
+            android:exported="false" />
+
 </application>
 
 </manifest>
