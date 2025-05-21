@@ -39,7 +39,12 @@
         <activity
             android:name=".Tnt_LostFound_ScrActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".Tnt_Payment_ScrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tnt_PaymentComp_ScrActivity"
+            android:exported="false" />
 </application>
 
 </manifest>
