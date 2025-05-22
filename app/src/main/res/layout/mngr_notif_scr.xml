@@ -10,42 +10,45 @@
     tools:context=".Mngr_Notif_ScrActivity"
     tools:ignore="NewApi">
 
-<!-- Top bar -->
+    <!-- Header -->
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#3A4F7A"
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="12dp"
-        tools:ignore="MissingConstraints">
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/logo" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="DomusLink"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <View
+            android:id="@+id/app_name"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DomusLink"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_manage"
-            app:tint="@android:color/white" />
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/settings"
+            app:srcCompat="@drawable/settings" />
+
     </LinearLayout>
+
 
 
     <!-- Notifications Panel -->
@@ -62,8 +65,10 @@
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.367">
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,7 +98,9 @@
             android:text="@string/new_notification" />
     </LinearLayout>
 
+
     <!-- Bottom Navigation -->
+
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
@@ -107,6 +114,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/PollsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -114,6 +122,7 @@
             android:src="@drawable/poll" />
 
         <ImageButton
+            android:id="@+id/PaymentButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -121,6 +130,7 @@
             android:src="@drawable/payment" />
 
         <ImageButton
+            android:id="@+id/FileButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,6 +138,7 @@
             android:src="@drawable/upload_receipts" />
 
         <ImageButton
+            android:id="@+id/notifButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

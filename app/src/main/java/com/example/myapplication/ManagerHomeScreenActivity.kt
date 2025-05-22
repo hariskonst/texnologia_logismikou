@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 class ManagerHomeScreenActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+    @SuppressLint("MissingInflatedId", "WrongViewCast", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.mngr_home_scr)
@@ -41,7 +41,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
-        val paymentButton = findViewById<ImageButton>(R.id.PollButton)
+        val paymentButton = findViewById<ImageButton>(R.id.imageButton11)
         paymentButton.setOnClickListener {
             val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
             startActivity(intent)
