@@ -25,6 +25,12 @@ class TenantHomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val pollBtn = findViewById<ImageButton>(R.id.PollButton)
+        pollBtn.setOnClickListener {
+            val intent = Intent(this, Tenant_Poll_ScrActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }

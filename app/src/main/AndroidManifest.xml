@@ -75,7 +75,9 @@
         <activity
             android:name=".QuickPrevScrActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".Tenant_Poll_ScrActivity"
+            android:exported="false" />
 
     </application>
 

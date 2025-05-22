@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/system_accent1_500"
+    tools:ignore="NewApi">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Τίτλος -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Poll List"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Θέματα Ψηφοφορίας -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88A2C2"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:backgroundTintMode="src_in"
+            android:backgroundTint="#88A2C2"
+            android:elevation="4dp"
+            android:clipToPadding="false"
+            android:layout_marginHorizontal="8dp"
+            >
+
+            <!-- Subject 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject 1"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button android:text="Option 1" android:id="@+id/rb1_1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <Button android:text="Option 2" android:id="@+id/rb1_2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <Button android:text="Option 3" android:id="@+id/rb1_3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Duration 2h left"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Subject 2 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88A2C2"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject 2"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button android:text="Option 1" android:id="@+id/rb2_1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <Button android:text="Option 2" android:id="@+id/rb2_2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <Button android:text="Option 3" android:id="@+id/rb2_3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Duration 8h left"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Subject 3 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88A2C2"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject 3"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button android:text="Option 1" android:id="@+id/rb3_1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+                <Button android:text="Option 2" android:id="@+id/rb3_2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <Button android:text="Option 3" android:id="@+id/rb3_3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration 6h left"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Κουμπί Ψήφου -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote"
+            android:layout_gravity="center"
+            android:backgroundTint="#88A2C2"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
