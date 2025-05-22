@@ -78,6 +78,9 @@
         <activity
             android:name=".Tenant_Poll_ScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".Rsvt_create_scrActivity"
+            android:exported="false" />
 
     </application>
 
