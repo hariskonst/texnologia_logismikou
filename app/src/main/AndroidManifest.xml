@@ -69,6 +69,14 @@
         <activity
             android:name=".Notif_Create_ScrActivity"
             android:exported="false" />
+        -->
+        <activity
+            android:name=".Com_Charges_ScrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuickPrevScrActivity"
+            android:exported="false" />
+
 
     </application>
 
