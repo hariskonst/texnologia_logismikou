@@ -78,10 +78,9 @@
             tools:ignore="ButtonStyle,HardcodedText,InefficientWeight" />
 
         <Button
-            android:id="@+id/Maintenance"
+            android:id="@+id/gotomaint"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:text="Manage Maintenance"
             tools:ignore="ButtonStyle,HardcodedText" />
 

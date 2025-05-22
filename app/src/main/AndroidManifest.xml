@@ -60,6 +60,12 @@
         <activity
             android:name=".NewTntAddScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".Maint_ScrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Maint_ScrActivity"
+            android:exported="false" />
 
     </application>
 

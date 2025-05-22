@@ -59,5 +59,11 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val gotomaintenance = findViewById<Button>(R.id.gotomaint)
+        gotomaintenance.setOnClickListener {
+            val intent = Intent(this, Maint_ScrActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
