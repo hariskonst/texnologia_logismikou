@@ -57,6 +57,9 @@
         <activity
             android:name=".Mngr_Poll_ScrActivity"
             android:exported="false" />
+        <activity
+            android:name=".NewTntAddScrActivity"
+            android:exported="false" />
 
     </application>
 
