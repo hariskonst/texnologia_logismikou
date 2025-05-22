@@ -15,10 +15,10 @@ class Maint_ScrActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.maint_scr)
 
-        val new = findViewById<Button>(R.id.newMaintenance)
+        /*val new = findViewById<Button>(R.id.newMaintenance)
         new.setOnClickListener {
             val intent = Intent(this, Add_Maint_ScrActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }

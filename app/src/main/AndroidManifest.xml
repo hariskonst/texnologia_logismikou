@@ -63,8 +63,11 @@
         <activity
             android:name=".Maint_ScrActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".Add_Maint_ScrActivity"
+            android:exported="false" /> -->
+        <activity
+            android:name=".Notif_Create_ScrActivity"
             android:exported="false" />
 
     </application>
