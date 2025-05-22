@@ -7,18 +7,24 @@ import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Maint_ScrActivity : AppCompatActivity() {
+class Com_Charges_ScrActivity : AppCompatActivity(){
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.maint_scr)
+        setContentView(R.layout.com_charges_scr)
 
-        /*val new = findViewById<Button>(R.id.newMaintenance)
-        new.setOnClickListener {
-            val intent = Intent(this, Add_Maint_ScrActivity::class.java)
+
+        val publicCommonChargesButtonNext = findViewById<Button>(R.id.public_comm_charges_BTN_next)
+        publicCommonChargesButtonNext.setOnClickListener {
+            val intent = Intent(this, QuickPrevScrActivity::class.java)
             startActivity(intent)
-        }*/
+
+        }
+
+
     }
+
+
 }

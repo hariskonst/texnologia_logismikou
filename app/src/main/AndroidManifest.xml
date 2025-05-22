@@ -63,9 +63,17 @@
         <activity
             android:name=".Maint_ScrActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".Add_Maint_ScrActivity"
             android:exported="false" />
+        -->
+        <activity
+            android:name=".Com_Charges_ScrActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuickPrevScrActivity"
+            android:exported="false" />
+
 
     </application>
 
