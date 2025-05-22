@@ -16,7 +16,6 @@ class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lost_found_entry_scr)
 
-        // Εφαρμογή συστήματος insets (status/navigation bar space)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.managerentryscreen)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -36,12 +35,10 @@ class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
 
             if (title.isNotEmpty() && desc.isNotEmpty() && date.isNotEmpty()) {
                 val newItem = "$title - $desc - $date"
-
                 // Επιστροφή της καταχώρησης στο calling Activity
                 val resultIntent = Intent().apply {
                     putExtra("newLostItem", newItem)
                 }
-
                 setResult(Activity.RESULT_OK, resultIntent)
                 finish()
             } else {
@@ -50,5 +47,3 @@ class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
         }
     }
 }
-
-

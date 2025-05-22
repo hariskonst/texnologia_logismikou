@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
+import android.widget.Button
+import android.widget.ImageButton
+
 
 class TenantHomeScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,5 +59,17 @@ class TenantHomeScreenActivity : AppCompatActivity() {
         //findViewById<ImageButton>(R.id.nav_notifications).setOnClickListener {
             //startActivity(Intent(this, NotificationsActivity::class.java))
         //}
+
+        val lostFoundBtn = findViewById<Button>(R.id.LostFound)
+        lostFoundBtn.setOnClickListener {
+            val intent = Intent(this, Tnt_LostFound_ScrActivity::class.java)
+            startActivity(intent)
+        }
+
+        val paymentBtn = findViewById<ImageButton>(R.id.imageButton11)
+        paymentBtn.setOnClickListener {
+            val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

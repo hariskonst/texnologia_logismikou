@@ -1,3 +1,4 @@
+// Tnt_Payment_ScrActivity.kt
 package com.example.myapplication
 
 import android.app.Activity
@@ -9,6 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Button
+
 
 class Tnt_Payment_ScrActivity : AppCompatActivity() {
 
@@ -52,5 +55,14 @@ class Tnt_Payment_ScrActivity : AppCompatActivity() {
                 paymentResultLauncher.launch(intent)
             }
         }
+        val clearButton = findViewById<Button>(R.id.clearCompletedButton)
+        clearButton.setOnClickListener {
+            paymentList = paymentList.filterNot { it.contains("Done") }.toMutableList()
+            adapter.clear()
+            adapter.addAll(paymentList)
+            adapter.notifyDataSetChanged()
+            PaymentStorage.saveList(this, paymentList)
+        }
+
     }
 }

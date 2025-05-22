@@ -25,9 +25,17 @@
             android:id="@+id/paymentListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:padding="4dp"
             android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/clearCompletedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Completed Payments"
+            android:layout_marginTop="12dp"/>
     </LinearLayout>
 </LinearLayout>
 

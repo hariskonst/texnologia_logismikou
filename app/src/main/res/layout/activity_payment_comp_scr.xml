@@ -26,32 +26,51 @@
         <EditText
             android:id="@+id/nameOnCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name on Card" />
+            android:layout_height="56dp"
+            android:hint="Name on Card"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/cardNumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Card Number" />
+            android:layout_height="56dp"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/expiryDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Card Expiration Date" />
+            android:layout_height="56dp"
+            android:hint="Card Expiration Date"
+            android:inputType="date"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/cardCVC"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Card Security Code" />
+            android:layout_height="56dp"
+            android:hint="Card Security Code"
+            android:inputType="numberPassword"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
         <Button
             android:id="@+id/submitPaymentButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:layout_marginTop="16dp" />
+            android:textColor="@android:color/white"
+            android:minHeight="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
     </LinearLayout>
 </ScrollView>

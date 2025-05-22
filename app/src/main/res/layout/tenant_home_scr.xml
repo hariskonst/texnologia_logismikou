@@ -68,10 +68,10 @@
             android:layout_marginEnd="8dp"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLostFound"
+            android:id="@+id/LostFound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lost &amp; Found"
+            android:text="Lost And Found"
             app:cornerRadius="20dp"
             app:strokeWidth="1dp"/>
     </LinearLayout>
@@ -259,7 +259,7 @@
             android:contentDescription="@string/vote"/>
 
         <ImageButton
-            android:id="@+id/nav_payments"
+            android:id="@+id/imageButton11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

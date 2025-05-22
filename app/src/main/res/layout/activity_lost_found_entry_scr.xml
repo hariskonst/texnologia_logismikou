@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Τίτλος -->
+        <!-- Title -->
         <TextView
-            android:id="@+id/cardDetailsTitle"
+            android:id="@+id/cardDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Lost and Found Entry"
@@ -23,37 +23,49 @@
             android:layout_marginBottom="24dp"
             android:textColor="@android:color/black" />
 
-        <!-- Πεδία καταχώρησης -->
+        <!-- Object Title -->
         <EditText
             android:id="@+id/editTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:hint="Object Title"
-            android:inputType="text" />
+            android:inputType="text"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
+        <!-- Object Description -->
         <EditText
             android:id="@+id/editDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:hint="Object Description"
             android:inputType="textMultiLine"
-            android:minLines="2"
-            android:layout_marginTop="12dp" />
+            android:minLines="3"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
+        <!-- Date Found -->
         <EditText
             android:id="@+id/editDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Date Found (e.g. 01/05/2025)"
-            android:inputType="text"
-            android:layout_marginTop="12dp" />
+            android:layout_height="56dp"
+            android:hint="Date Found"
+            android:inputType="date"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
-        <!-- Κουμπί υποβολής -->
+        <!-- Submit Button -->
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:layout_marginTop="24dp" />
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6A4CAF"
+            android:minHeight="48dp"
+            android:layout_marginBottom="24dp" />
     </LinearLayout>
 </ScrollView>
