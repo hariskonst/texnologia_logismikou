@@ -21,6 +21,16 @@
         tools:layout_editor_absoluteX="0dp">
 
         <!-- Title -->
+        <TextView
+            android:id="@+id/cardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Lost and Found Entry"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="@android:color/black" />
 
         <!-- Object Title -->
 
@@ -50,6 +60,7 @@
             android:minLines="3"
             android:padding="12dp" />
 
+        <!-- Date Found -->
         <EditText
             android:id="@+id/editDate"
             android:layout_width="350dp"
