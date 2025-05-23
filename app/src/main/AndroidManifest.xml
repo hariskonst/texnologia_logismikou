@@ -81,6 +81,10 @@
         <activity
             android:name=".Rsvt_create_scrActivity"
             android:exported="false" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+
 
     </application>
 
