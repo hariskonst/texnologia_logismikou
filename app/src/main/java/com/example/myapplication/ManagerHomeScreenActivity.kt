@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class ManagerHomeScreenActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "WrongViewCast", "CutPasteId")
@@ -65,5 +66,10 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val marketplaceCard = findViewById<CardView>(R.id.marketplace_card)
+        marketplaceCard.setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
+        }
     }
+
 }
