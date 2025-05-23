@@ -70,6 +70,12 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
         marketplaceCard.setOnClickListener {
             startActivity(Intent(this, MarketplaceActivity::class.java))
         }
+
+        val tenantHomeButtonAlaMilt = findViewById<Button>(R.id.btnSwitchToTenant)
+        tenantHomeButtonAlaMilt.setOnClickListener {
+            val intent = Intent(this, TenantHomeScreenActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
