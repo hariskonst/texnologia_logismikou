@@ -22,6 +22,7 @@
 
         <!-- Title -->
         <TextView
+            android:id="@+id/cardDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Lost and Found Entry"
@@ -81,8 +82,7 @@
             android:layout_marginBottom="24dp"
             android:backgroundTint="#6A4CAF"
             android:minHeight="48dp"
-            android:text="Submit"
-            android:textColor="@android:color/white" />
+            android:layout_marginBottom="24dp" />
     </LinearLayout>
 
     <TextView
