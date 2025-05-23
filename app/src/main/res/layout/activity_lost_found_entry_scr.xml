@@ -22,7 +22,6 @@
 
         <!-- Title -->
         <TextView
-            android:id="@+id/cardDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Lost and Found Entry"
@@ -74,6 +73,7 @@
 
         <!-- Submit Button -->
         <Button
+            android:text="Submit"
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,8 +81,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="24dp"
             android:backgroundTint="#6A4CAF"
-            android:minHeight="48dp"
-            android:layout_marginBottom="24dp" />
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <TextView
