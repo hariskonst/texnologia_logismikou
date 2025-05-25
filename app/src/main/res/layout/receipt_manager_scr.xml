@@ -11,93 +11,101 @@
     tools:ignore="NewApi">
 
 
-  <LinearLayout
+  <Button
+      android:id="@+id/nextScreen"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="40dp"
+      android:layout_marginBottom="56dp"
+      android:backgroundTint="#6D84A6"
+      android:text="Next"
+      android:textColor="#FFFFFF"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      tools:ignore="HardcodedText,MissingConstraints" />
 
-      android:orientation="vertical"
-      android:padding="16dp"
+  <TextView
+      android:id="@+id/textView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      tools:ignore="MissingConstraints">
+      android:text="Receipts List"
+      android:textAlignment="center"
+      android:textColor="#000000"
+      android:textSize="20sp"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText,MissingConstraints"
+      tools:layout_editor_absoluteX="17dp" />
+
+  <LinearLayout
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="104dp"
+      android:orientation="vertical"
+      android:padding="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      tools:ignore="MissingConstraints"
+      tools:layout_editor_absoluteX="0dp">
 
     <!-- Ενότητα Files -->
-    <LinearLayout
-        android:orientation="vertical"
-        android:background="#4E6E94"
-        android:padding="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:clipToOutline="true"
-        tools:ignore="UnusedAttribute">
-
-      <TextView
-          android:text="Files"
-          android:textColor="#FFFFFF"
-          android:textStyle="bold"
-          android:textSize="18sp"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          tools:ignore="HardcodedText" />
-
-      <TextView
-          android:text="Elevator Fix\n500 $\nFile ~ 📄"
-          android:textColor="#FFFFFF"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="8dp"
-          tools:ignore="HardcodedText" />
-
-      <TextView
-          android:text="• ~~~~~~~~~~~~~~\n• ~~~~~~~~~~~~~~"
-          android:textColor="#FFFFFF"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="8dp"
-          tools:ignore="HardcodedText" />
-    </LinearLayout>
 
     <!-- Ενότητα Service Description -->
+
+    <ListView
+        android:id="@+id/ReceiptsListView"
+        android:layout_width="match_parent"
+        android:layout_height="277dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:listSelector="@android:color/darker_gray"
+        android:padding="8dp" />
+
     <TextView
-        android:text="Service description"
-        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Service description"
+        android:textColor="#000000"
         tools:ignore="HardcodedText" />
 
     <EditText
+        android:id="@+id/serviceDesc"
         android:layout_width="match_parent"
-        android:padding="5dp"
         android:layout_height="48dp"
         android:background="@android:color/darker_gray"
-        android:textColor="@color/black"
         android:hint="Describe the service"
+        android:padding="5dp"
+        android:textColor="@color/black"
         tools:ignore="HardcodedText,TextFields" />
 
     <!-- Amount -->
     <TextView
-        android:text="Amount"
-        android:textColor="#000000"
-        android:layout_marginTop="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Amount"
+        android:textColor="#000000"
         tools:ignore="HardcodedText" />
 
     <EditText
 
+        android:id="@+id/serviceAmount"
         android:layout_width="wrap_content"
-        android:padding="5dp"
         android:layout_height="40dp"
-        android:textColor="@color/black"
         android:background="@android:color/darker_gray"
         android:hint="Enter amount"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
         tools:ignore="Autofill,HardcodedText" />
 
     <!-- Επιλογή αρχείου -->
     <Button
+        android:id="@+id/chooseFileBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -108,15 +116,16 @@
 
     <Button
         android:id="@+id/public_comm_charges_BTN"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="#6D84A6"
+        android:baselineAligned="false"
         android:text="Public common charges"
         android:textColor="#FFFFFF"
         tools:ignore="HardcodedText" />
+
   </LinearLayout>
 
 
-
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
