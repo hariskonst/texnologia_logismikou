@@ -1,47 +1,48 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ImageButton
+import com.google.android.material.button.MaterialButton
+import androidx.appcompat.app.AppCompatActivity
 
-
+/**
+ * Tenant home screen with navigation to various features including complaints and notifications.
+ */
 class TenantHomeScreenActivity : AppCompatActivity() {
-    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tenant_home_scr)
 
-        val lostFoundBtn = findViewById<Button>(R.id.LostFound)
-        lostFoundBtn.setOnClickListener {
-            val intent = Intent(this, Tnt_LostFound_ScrActivity::class.java)
-            startActivity(intent)
+        // Lost & Found screen
+        findViewById<Button>(R.id.LostFound).setOnClickListener {
+            startActivity(Intent(this, Tnt_LostFound_ScrActivity::class.java))
         }
 
-        val RsvtBtn = findViewById<Button>(R.id.buttonReservations)
-        RsvtBtn.setOnClickListener {
-            val intent = Intent(this, Rsvt_create_scrActivity::class.java)
-            startActivity(intent)
+        // Reservations screen
+        findViewById<Button>(R.id.buttonReservations).setOnClickListener {
+            startActivity(Intent(this, Rsvt_create_scrActivity::class.java))
         }
 
-        val reserve = findViewById<Button>(R.id.LostFound)
-        reserve.setOnClickListener {
-            val intent = Intent(this, Tnt_LostFound_ScrActivity::class.java)
-            startActivity(intent)
+        // Polls screen
+        findViewById<ImageButton>(R.id.PollButton).setOnClickListener {
+            startActivity(Intent(this, Tenant_Poll_ScrActivity::class.java))
         }
 
-        val pollBtn = findViewById<ImageButton>(R.id.PollButton)
-        pollBtn.setOnClickListener {
-            val intent = Intent(this, Tenant_Poll_ScrActivity::class.java)
-            startActivity(intent)
+        // Payments screen
+        findViewById<ImageButton>(R.id.imageButton11).setOnClickListener {
+            startActivity(Intent(this, Tnt_Payment_ScrActivity::class.java))
         }
 
-        val paymentButton = findViewById<ImageButton>(R.id.imageButton11)
-        paymentButton.setOnClickListener {
-            val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
-            startActivity(intent)
+        // File a new complaint
+        findViewById<MaterialButton>(R.id.btnFileComplaint).setOnClickListener {
+            startActivity(Intent(this, ComplaintActivity::class.java))
+        }
+
+        // View tenant notifications
+        findViewById<ImageButton>(R.id.buttonNotif).setOnClickListener {
+            startActivity(Intent(this, TenantNotifScrActivity::class.java))
         }
     }
 }

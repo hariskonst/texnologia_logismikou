@@ -1,23 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app   ="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Κεντρικό TextView -->
-    <TextView
-        android:id="@+id/tvDetail"
-        android:layout_width="0dp"
+    <!-- 1) Το Card απλώς το βάζουμε πάνω, χωρίς anchor attributes -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDetail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Επιλογή:"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="72dp">
 
+        <!-- Το εσωτερικό όπως πριν -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 2) Το FAB είναι το μόνο που έχει anchor attributes -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_border_24"
+        android:contentDescription="@null"
+        app:layout_anchor="@id/cardDetail"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="16dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

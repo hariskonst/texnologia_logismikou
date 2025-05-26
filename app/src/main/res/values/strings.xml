@@ -6,4 +6,6 @@
     <string name="upload_Receipts">upload receipts</string>
     <string name="notification">notification</string>
     <string name="new_notification">+ New Notification</string>
+    <string name="add_to_favorites">Πρόσθεσε στα Favorites</string>
+    <string name="show_favorites">Εμφάνιση Αγαπημένων</string>
 </resources>
