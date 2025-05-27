@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import ManageNotifCase
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.SimpleAdapter
 import androidx.activity.enableEdgeToEdge
@@ -9,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /**
  * Οθόνη που εμφανίζει τις ειδοποιήσεις του tenant σε two-line λίστα.
@@ -17,6 +22,8 @@ import android.widget.Button
  * σε long-tap διαγράφεται η ειδοποίηση.
  */
 class TenantNotifScrActivity : AppCompatActivity() {
+
+    private lateinit var manageNotifCase: ManageNotifCase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +55,7 @@ class TenantNotifScrActivity : AppCompatActivity() {
         )
 
         // Bind adapter
-        val listView = findViewById<ListView>(R.id.lvTenantNotifs)
+        var listView = findViewById<ListView>(R.id.lvTenantNotifs)
         listView.adapter = adapter
 
         // Tap: show full message dialog
@@ -88,6 +95,15 @@ class TenantNotifScrActivity : AppCompatActivity() {
                 .setPositiveButton("OK", null)
                 .show()
         }
+
+        //Notifications
+        manageNotifCase = ManageNotifCase(this)
+        listView = findViewById(R.id.Listview1)
+
+        val notifications = manageNotifCase.loadNotificationList()
+        val titles = notifications.map { "${it.title}: ${it.message}" }
+        val adapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, titles)
+        listView.adapter = adapter1
 
     }
 }

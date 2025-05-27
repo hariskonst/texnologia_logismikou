@@ -9,18 +9,9 @@
     android:background="@android:color/system_accent1_500"
     tools:ignore="NewApi">
 
-    <Button
-        android:id="@+id/btnClearTenantData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Καθαρισμός"
-        android:layout_margin="12dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
 
     <!-- Header -->
+
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -60,20 +51,42 @@
     </LinearLayout>
 
     <!-- Tenant Notifications List -->
-    <ListView
-        android:id="@+id/lvTenantNotifs"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/btnClearTenantData"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 
     <!-- Bottom Navigation -->
+    <ListView
+        android:id="@+id/lvTenantNotifs"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <ListView
+        android:id="@+id/Listview1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnClearTenantData"
+        app:layout_constraintTop_toBottomOf="@+id/lvTenantNotifs"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnClearTenantData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="40dp"
+        android:text="Καθαρισμός"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
