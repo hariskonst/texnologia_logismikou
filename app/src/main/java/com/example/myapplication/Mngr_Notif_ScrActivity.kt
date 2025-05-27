@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Οθόνη διαχείρισης καταγγελιών από τον manager.
@@ -140,7 +140,10 @@ class Mngr_Notif_ScrActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val notifications = manageNotifCase.loadNotificationList()
-        val titles = notifications.map { "${it.title}: ${it.message}" }
+        val titles = notifications.map {
+            val formattedTime = formatTimestamp(it.timestamp)
+            "${it.title}: ${it.message}\n[$formattedTime]"
+        }
 
         adapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, titles)
         listView1.adapter = adapter1
@@ -159,5 +162,10 @@ class Mngr_Notif_ScrActivity : AppCompatActivity() {
 
             true // επιστρέφει ότι έγινε το long press
         }
+    }
+
+    private fun formatTimestamp(timestamp: Long): String {
+        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+        return sdf.format(Date(timestamp))
     }
 }
