@@ -101,9 +101,16 @@ class TenantNotifScrActivity : AppCompatActivity() {
         listView = findViewById(R.id.Listview1)
 
         val notifications = manageNotifCase.loadNotificationList()
-        val titles = notifications.map { "${it.title}: ${it.message}" }
+        val titles = notifications.map {
+            val time = formatTimestamp(it.timestamp)
+            "${it.title}: ${it.message}\n[$time]"
+        }
         val adapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, titles)
         listView.adapter = adapter1
 
+    }
+    private fun formatTimestamp(timestamp: Long): String {
+        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+        return sdf.format(Date(timestamp))
     }
 }
