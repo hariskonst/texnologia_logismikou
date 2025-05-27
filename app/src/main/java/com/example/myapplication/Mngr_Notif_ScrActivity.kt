@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import ManageNotifCase
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -15,12 +17,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 /**
  * Οθόνη διαχείρισης καταγγελιών από τον manager.
  * Δύο-γραμμη λίστα με θέμα και preview, tap για απάντηση, long-tap για διαγραφή.
  */
 class Mngr_Notif_ScrActivity : AppCompatActivity() {
+
+    private lateinit var manageNotifCase: ManageNotifCase
+    private lateinit var listView1: ListView
+    private lateinit var adapter1: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +117,11 @@ class Mngr_Notif_ScrActivity : AppCompatActivity() {
             true
         }
 
+        //New notification
+        manageNotifCase = ManageNotifCase(this)
+        listView1 = findViewById(R.id.Listview1)
+
+
         // Bottom navigation buttons
         findViewById<Button>(R.id.NewNotifButton).setOnClickListener {
             startActivity(Intent(this, Notif_Create_ScrActivity::class.java))
@@ -121,6 +134,30 @@ class Mngr_Notif_ScrActivity : AppCompatActivity() {
         }
         findViewById<ImageButton>(R.id.FileButton).setOnClickListener {
             startActivity(Intent(this, ReceiptManagerScrActivity::class.java))
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val notifications = manageNotifCase.loadNotificationList()
+        val titles = notifications.map { "${it.title}: ${it.message}" }
+
+        adapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, titles)
+        listView1.adapter = adapter1
+
+        // Long press to delete
+        listView1.setOnItemLongClickListener { _, _, position, _ ->
+            val notifToDelete = notifications[position]
+            manageNotifCase.deleteNotification(notifToDelete)
+
+            // Ανανέωση λίστας
+            val updated = manageNotifCase.loadNotificationList()
+            val updatedTitles = updated.map { "${it.title}: ${it.message}" }
+            adapter1.clear()
+            adapter1.addAll(updatedTitles)
+            adapter1.notifyDataSetChanged()
+
+            true // επιστρέφει ότι έγινε το long press
         }
     }
 }

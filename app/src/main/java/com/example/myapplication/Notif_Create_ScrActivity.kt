@@ -1,9 +1,12 @@
 package com.example.myapplication
 
+import ManageNotifCase
+import Notification
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,5 +49,20 @@ class Notif_Create_ScrActivity : AppCompatActivity(){
             val intent = Intent(this, Mngr_Notif_ScrActivity::class.java)
             startActivity(intent)
         }
+
+        val titleInput: EditText = findViewById(R.id.nameInput)
+        val messageInput: EditText = findViewById(R.id.descriptionInput)
+        val createButton: Button = findViewById(R.id.createButton)
+
+        val manageNotifCase = ManageNotifCase(this)
+
+        createButton.setOnClickListener {
+            val title = titleInput.text.toString()
+            val message = messageInput.text.toString()
+            val notification = Notification(title = title, message = message)
+            manageNotifCase.createNotification(notification)
+            finish()
+        }
+
     }
 }
