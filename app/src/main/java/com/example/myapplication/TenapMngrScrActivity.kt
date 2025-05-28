@@ -16,17 +16,23 @@ class TenapMngrScrActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.tenap_mngr_scr)
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tenap_manager)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
         val removetnt = findViewById<Button>(R.id.remove_tnt)
         removetnt.setOnClickListener {
             val intent = Intent(this, TntListScrActivity::class.java)
             startActivity(intent)
 
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tenap_manager)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val addtnt = findViewById<Button>(R.id.add_tnt)
+        addtnt.setOnClickListener {
+            val intent = Intent(this, NewTntAddScrActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }

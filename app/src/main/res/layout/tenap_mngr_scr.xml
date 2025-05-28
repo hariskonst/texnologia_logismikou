@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tenap_manager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".TenapMngrScrActivity">
+    android:background="@android:color/system_accent1_500"
+    tools:context=".TenapMngrScrActivity"
+    tools:ignore="NewApi">
 
     <!-- Header -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UseCompoundDrawables">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="40dp"
@@ -32,24 +33,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="DomusLink"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:gravity="center"
             tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/settings"
+            android:contentDescription="@string/settings"
+            />
 
     </LinearLayout>
 
     <!-- Middle elements -->
-
-
-    <!-- Bottom Navigation (Fake Icons) -->
     <LinearLayout
         android:id="@+id/middle_elements"
         android:layout_width="336dp"
-        android:layout_height="292dp"
-        android:layout_marginTop="236dp"
-        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,15 +63,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Apartment List -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:layout_marginBottom="12dp"
-            android:background="#59769B"
-            android:backgroundTint="#597698"
+            android:background="#3A4F7A"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp"
@@ -90,14 +93,12 @@
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
-        <!-- Tenant -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:background="#59769B"
-            android:backgroundTint="#59769B"
+            android:background="#3A4F7A"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp"
@@ -133,5 +134,55 @@
         </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Apartment List -->
 
+    <!-- Tenant -->
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#3A4F7A"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/PollsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/vote"
+            android:src="@drawable/poll" />
+
+        <ImageButton
+            android:id="@+id/PaymentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/payment"
+            android:src="@drawable/payment" />
+
+        <ImageButton
+            android:id="@+id/FileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/upload_Receipts"
+            android:src="@drawable/upload_receipts" />
+
+        <ImageButton
+            android:id="@+id/notifButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/notification"
+            android:src="@drawable/notifications" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
