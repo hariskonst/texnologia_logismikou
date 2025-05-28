@@ -47,32 +47,77 @@
             app:srcCompat="@drawable/settings"
             android:contentDescription="@string/settings"/>
 
+    </LinearLayout>
+
+
+    <!-- List of Notifications -->
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="340dp"
+        android:background="@drawable/rounded_container"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.913"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Notifications"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/Listview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="20dp" />
 
     </LinearLayout>
 
-    <!-- Tenant Notifications List -->
-
-
-    <!-- Bottom Navigation -->
-    <ListView
-        android:id="@+id/lvTenantNotifs"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
-
-    <ListView
-        android:id="@+id/Listview1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+    <!-- List of complaints -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="390dp"
+        android:layout_height="290dp"
+        android:background="@drawable/rounded_container"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btnClearTenantData"
-        app:layout_constraintTop_toBottomOf="@+id/lvTenantNotifs"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Complaints"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/lvTenantNotifs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnClearTenantData"
@@ -87,6 +132,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"

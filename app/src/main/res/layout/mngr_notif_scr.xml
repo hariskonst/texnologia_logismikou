@@ -49,44 +49,86 @@
     </LinearLayout>
 
 
+    <!-- List of Notifications -->
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/rounded_container"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Notifications"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/Listview1"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <!-- Button για δημιουργία νέας notification -->
+        <Button
+            android:id="@+id/NewNotifButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:text="@string/new_notification" />
+
+    </LinearLayout>
 
     <!-- List of complaints -->
-    <ListView
-        android:id="@+id/lvComplaints"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:padding="16dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="390dp"
+        android:layout_height="290dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/rounded_container"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ListView
-        android:id="@+id/Listview1"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/NewNotifButton"
-        app:layout_constraintTop_toBottomOf="@+id/lvComplaints"
-        tools:layout_editor_absoluteX="0dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Complaints"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-
-    <!-- Button για δημιουργία νέας notification -->
-    <Button
-        android:id="@+id/NewNotifButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/new_notification"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lvComplaints"
-        app:layout_constraintVertical_bias="1.0" />
+        <ListView
+            android:id="@+id/lvComplaints"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
     <!-- Bottom Navigation -->
     <LinearLayout
@@ -135,4 +177,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
