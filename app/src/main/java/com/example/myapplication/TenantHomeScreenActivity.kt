@@ -36,7 +36,7 @@ class TenantHomeScreenActivity : AppCompatActivity() {
         }
 
         // File a new complaint
-        findViewById<MaterialButton>(R.id.FileButton).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnFileComplaint).setOnClickListener {
             startActivity(Intent(this, ComplaintActivity::class.java))
         }
 

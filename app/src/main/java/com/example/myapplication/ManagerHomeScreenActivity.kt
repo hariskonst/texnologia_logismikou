@@ -14,7 +14,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.mngr_home_scr)
 
-        val secondButton = findViewById<ImageButton>(R.id.UploadReceiptButton)
+        val secondButton = findViewById<ImageButton>(R.id.FileButton)
         secondButton.setOnClickListener {
             val intent = Intent(this, ReceiptManagerScrActivity::class.java)
             startActivity(intent)
