@@ -21,7 +21,7 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
-        val notifbutton = findViewById<ImageButton>(R.id.notifbutton)
+        val notifbutton = findViewById<ImageButton>(R.id.notifButton)
         notifbutton.setOnClickListener {
             val intent = Intent(this, Mngr_Notif_ScrActivity::class.java)
             startActivity(intent)
@@ -42,13 +42,13 @@ class ManagerHomeScreenActivity : AppCompatActivity() {
 
         }
 
-        val paymentButton = findViewById<ImageButton>(R.id.imageButton11)
+        val paymentButton = findViewById<ImageButton>(R.id.PaymentButton)
         paymentButton.setOnClickListener {
             val intent = Intent(this, Tnt_Payment_ScrActivity::class.java)
             startActivity(intent)
         }
 
-        val pollButton = findViewById<ImageButton>(R.id.PollButton)
+        val pollButton = findViewById<ImageButton>(R.id.PollsButton)
         pollButton.setOnClickListener {
             val intent = Intent(this, Mngr_Poll_ScrActivity::class.java)
             startActivity(intent)

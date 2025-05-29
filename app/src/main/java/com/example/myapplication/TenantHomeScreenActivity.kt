@@ -26,22 +26,22 @@ class TenantHomeScreenActivity : AppCompatActivity() {
         }
 
         // Polls screen
-        findViewById<ImageButton>(R.id.PollButton).setOnClickListener {
+        findViewById<ImageButton>(R.id.PollsButton).setOnClickListener {
             startActivity(Intent(this, Tenant_Poll_ScrActivity::class.java))
         }
 
         // Payments screen
-        findViewById<ImageButton>(R.id.imageButton11).setOnClickListener {
+        findViewById<ImageButton>(R.id.PaymentButton).setOnClickListener {
             startActivity(Intent(this, Tnt_Payment_ScrActivity::class.java))
         }
 
         // File a new complaint
-        findViewById<MaterialButton>(R.id.btnFileComplaint).setOnClickListener {
+        findViewById<MaterialButton>(R.id.FileButton).setOnClickListener {
             startActivity(Intent(this, ComplaintActivity::class.java))
         }
 
         // View tenant notifications
-        findViewById<ImageButton>(R.id.buttonNotif).setOnClickListener {
+        findViewById<ImageButton>(R.id.notifButton).setOnClickListener {
             startActivity(Intent(this, TenantNotifScrActivity::class.java))
         }
     }
