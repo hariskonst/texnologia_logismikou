@@ -52,8 +52,7 @@
     <!-- List of Notifications -->
     <LinearLayout
         android:layout_width="390dp"
-        android:layout_height="370dp"
-        android:layout_marginTop="92dp"
+        android:layout_height="340dp"
         android:background="@drawable/rounded_container"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -61,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/header"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.826"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -77,7 +76,7 @@
         <ListView
             android:id="@+id/Listview1"
             android:layout_width="match_parent"
-            android:layout_height="275dp"
+            android:layout_height="250dp"
             tools:layout_editor_absoluteX="20dp" />
 
         <!-- Button για δημιουργία νέας notification -->
@@ -96,8 +95,8 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="390dp"
-        android:layout_height="290dp"
-        android:layout_marginBottom="112dp"
+        android:layout_height="310dp"
+        android:layout_marginBottom="104dp"
         android:background="@drawable/rounded_container"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
