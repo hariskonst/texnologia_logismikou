@@ -30,16 +30,17 @@
 
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="0dp"
+            android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="DomusLink"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:gravity="center"
             tools:ignore="HardcodedText" />
 
         <ImageButton
+            android:background="@android:color/transparent"
             android:id="@+id/settingsButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -144,44 +145,48 @@
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3A4F7A"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#3A4F7A"
         android:padding="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
             android:id="@+id/PollsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:contentDescription="@string/vote"
+            android:background="@android:color/transparent"
             android:src="@drawable/poll" />
 
         <ImageButton
             android:id="@+id/PaymentButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:contentDescription="@string/payment"
+            android:background="@android:color/transparent"
             android:src="@drawable/payment" />
 
         <ImageButton
             android:id="@+id/FileButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:contentDescription="@string/upload_Receipts"
+            android:background="@android:color/transparent"
             android:src="@drawable/upload_receipts" />
 
         <ImageButton
             android:id="@+id/notifButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:contentDescription="@string/notification"
+            android:background="@android:color/transparent"
             android:src="@drawable/notifications" />
 
     </LinearLayout>

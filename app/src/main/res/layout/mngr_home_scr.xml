@@ -40,6 +40,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageButton
+            android:background="@android:color/transparent"
             android:id="@+id/settingsButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -215,40 +216,40 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
-            android:id="@+id/PollButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/PollsButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/poll"
             android:contentDescription="@string/vote"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/poll" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/PaymentButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/payment"
             android:contentDescription="@string/payment"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/payment" />
 
         <ImageButton
-            android:id="@+id/UploadReceiptButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/FileButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/upload_receipts"
             android:contentDescription="@string/upload_Receipts"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/upload_receipts" />
 
         <ImageButton
-            android:id="@+id/notifbutton"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/notifButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/notifications"
             android:contentDescription="@string/notification"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/notifications" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
