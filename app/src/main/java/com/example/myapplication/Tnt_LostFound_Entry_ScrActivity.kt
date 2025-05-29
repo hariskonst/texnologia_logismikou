@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import ManageNotifCase
+import Notification
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -40,6 +42,13 @@ class Tnt_LostFound_Entry_ScrActivity : AppCompatActivity() {
                     putExtra("newLostItem", newItem)
                 }
                 setResult(Activity.RESULT_OK, resultIntent)
+
+                val manageNotifCase = ManageNotifCase(this)
+                val title1 = titleField.text.toString().trim()
+                val message = descField.text.toString().trim()
+                val notification = Notification(title = title1, message = message)
+                manageNotifCase.createNotification(notification)
+
                 finish()
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()

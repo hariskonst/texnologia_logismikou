@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import ManageNotifCase
+import Notification
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -135,6 +137,11 @@ class ReceiptManagerScrActivity : AppCompatActivity() {
                 serviceAmountField.text.clear()
                 selectedFileUri = null
 
+                val manageNotifCase = ManageNotifCase(this)
+                val title = "New Receipt added"
+                val message = "New Common charges receipt uploaded by manager"
+                val notification = Notification(title = title, message = message)
+                manageNotifCase.createNotification(notification)
 
                 Toast.makeText(this, "Receipt added successfully!", Toast.LENGTH_SHORT).show()
                 updateListView()

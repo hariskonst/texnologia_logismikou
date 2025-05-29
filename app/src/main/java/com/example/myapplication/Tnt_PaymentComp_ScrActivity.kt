@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import ManageNotifCase
+import Notification
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -35,6 +37,13 @@ class Tnt_PaymentComp_ScrActivity : AppCompatActivity() {
                     putExtra("newPayment", paid)
                 }
                 setResult(Activity.RESULT_OK, result)
+
+                val manageNotifCase = ManageNotifCase(this)
+                val title = "Payment Completed"
+                val message = "Your payment was successful!"
+                val notification = Notification(title = title, message = message)
+                manageNotifCase.createNotification(notification)
+
                 finish()
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
