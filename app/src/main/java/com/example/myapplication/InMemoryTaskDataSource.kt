@@ -11,14 +11,14 @@ class InMemoryTaskDataSource(context: Context) : TaskDataSource {
 
     // 1. Βασική λίστα tasks
     private val allTasks = listOf(
-        "Προετοιμασία αναφοράς",
-        "Ενημέρωση βάσης δεδομένων",
-        "Έλεγχος logs",
-        "Αποστολή email",
-        "Δημιουργία back-up",
-        "Αναλυτική έκθεση KPI",
-        "Επισκόπηση σφαλμάτων",
-        "Συνεδρία brainstorming"
+        "Report Preparation",
+        "Database Update",
+        "Log Review",
+        "Email Sending",
+        "Backup Creation",
+        "Detailed KPI Report",
+        "Error Review",
+        "Brainstorming Session"
     )
 
     // 2. Favorites σε in-memory set

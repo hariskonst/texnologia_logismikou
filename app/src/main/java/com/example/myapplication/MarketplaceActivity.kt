@@ -9,10 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.widget.Toast
 
-
-
-
-
 class MarketplaceActivity : AppCompatActivity() {
 
     private lateinit var adapter: TaskAdapter
@@ -52,5 +48,3 @@ class MarketplaceActivity : AppCompatActivity() {
         }
     }
 }
-
-
