@@ -2,10 +2,15 @@ package com.example.myapplication
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.yourapp.manager.ManageMaint
+import com.yourapp.model.Maintenance
 
 class Add_Maint_ScrActivity : AppCompatActivity() {
 
@@ -14,11 +19,26 @@ class Add_Maint_ScrActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.add_maint_scr)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.maintscr)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // 1) Ορθός τύπος View
+        val etDesc = findViewById<EditText>(R.id.etMaintDesc)
+        val btnConfirm = findViewById<Button>(R.id.addButton)
+
+        btnConfirm.setOnClickListener {
+            val desc = etDesc.text.toString().trim()
+            if (desc.isEmpty()) {
+                etDesc.error = "Απαιτείται περιγραφή"
+                return@setOnClickListener
+            }
+
+            // υπολόγισε νέο ID (max+1)
+            val current = ManageMaint.queryMaintenance(this)
+            val newId = (current.maxByOrNull { it.id }?.id ?: 0) + 1
+            val m = Maintenance(newId, desc)
+
+            ManageMaint.addMaintenance(this, m)
+            Toast.makeText(this, "Maintenance προστέθηκε", Toast.LENGTH_SHORT).show()
+            finish()  // → θα φρεσκαριστεί στη onResume() της λίστας
         }
     }
-
 }
