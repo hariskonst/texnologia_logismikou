@@ -44,7 +44,7 @@ object ManageMaint {
         save(ctx, list)
     }
 
-    /* Σπείρε default data στην πρώτη εκτέλεση */
+    /*  default data στην πρώτη εκτέλεση */
     fun seedIfNeeded(ctx: Context) {
         val list = queryMaintenance(ctx)
         if (list.isEmpty()) {

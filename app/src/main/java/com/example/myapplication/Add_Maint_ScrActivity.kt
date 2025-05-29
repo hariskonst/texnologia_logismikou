@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import ManageNotifCase
+import Notification
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
@@ -35,6 +37,12 @@ class Add_Maint_ScrActivity : AppCompatActivity() {
             val current = ManageMaint.queryMaintenance(this)
             val newId = (current.maxByOrNull { it.id }?.id ?: 0) + 1
             val m = Maintenance(newId, desc)
+
+            val manageNotifCase = ManageNotifCase(this)
+            val title = "New maintenance"
+            val message = etDesc.text.toString().trim()
+            val notification = Notification(title = title, message = message)
+            manageNotifCase.createNotification(notification)
 
             ManageMaint.addMaintenance(this, m)
             Toast.makeText(this, "Maintenance προστέθηκε", Toast.LENGTH_SHORT).show()
